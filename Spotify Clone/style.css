@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;500;700&family=Varela+Round&display=swap');
+
+body{
+    background: linear-gradient(150deg,rgb(69, 223, 69),rgb(75, 75, 233));
+    min-height: 92vh;
+    overflow: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+nav{
+    font-family: 'Roboto',sans-serif;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    height: 60px;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+nav ul li{
+    padding: 0 15px;
+}
+.brand img{
+    width: 45px;
+    background-color: black;
+    padding-right: 10px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size:1.5rem;
+}
+.container{
+    min-height: 59vh;
+    background-color: black;
+    color: white;
+    font-family: 'Valera Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 74%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.bottom{
+    background-color: rgb(5, 5, 5);
+    position: sticky;
+    height: 130px;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icons{
+    margin-top: 20px;
+}
+.icons i{
+    cursor: pointer;
+    font-size: 34px;
+}
+#myProgressBar{
+    height: 6px;
+    width: 75vw;
+    cursor: pointer;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    color: black;
+    background-color: white;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    width: 130%;
+}
+.songItem img{
+    width: 43px;
+    margin:0 15px;
+    border-radius: 20px;
+}
+.songName{
+    font-size: 1.2rem;
+}
+.timeStamp{
+    margin: 0 20px ;
+    font-size: 1rem;
+}
+.songItemContainer{
+    margin-top: 50px;
+}
+
+.songInfo{
+    color: rgb(236, 241, 236);
+    position: absolute;
+    left: 12.5vw;
+    bottom: 30px;
+    font-family: 'Valera Round' sans-serif;
+    font-size: 2rem;
+}
+.songInfo img{
+ opacity: 0;
+ top: 40px;
+ transition: opacity 0.4s ease-in;
+ width: 28px;
+ margin-right: 13px;
+}
+.fa-solid{
+    padding: 0 15px;
+}
+.songItemPlay{
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+.songItemPlay:hover{
+    transform: translateY(-30%);
+    transition: 2s;
+}
+
+@media screen and (max-width: 980px) {
+    .container{
+        background: rgb(6, 5, 5,0.3);
+        text-align: center;
+    }
+    .songInfo{
+        color: white;
+        font-size: 20px;
+    }
+    .icons i{
+        font-size: 20px;
+    }
+    .fa-solid{
+        padding: 0 5px;
+    }
+   .songItem{
+    width: 80%;
+   }
+    .songItemContainer{
+    width: 80vw;
+    }
+    .songList{
+        text-align: left;
+    }
+    #myProgressBar{
+        height: 5px;
+    }
+    .songInfo img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:625px) {
+.songName{
+    font-size: 16px;
+    font-weight: bold;
+}
+.timeStamp{
+    font-size: 14px;
+}
+.songItemPlay{
+    font-size: 18px;   
+}
+.songItem{
+    padding: 15px;
+}
+.songItem img{
+    width: 20px;
+}
+}
+
+@media screen and (max-width:570px) {
+    .songItem img{
+      display: none;
+    }
+    .songName{
+        font-weight: bold;
+        font-size: 12px;
+    }
+     #myProgressBar{
+        height: 4px;
+    }
+  .timeStamp{
+    font-size: 10px;
+}
+.songItemPlay{
+    font-size: 16px;   
+}
+.songItem{
+    padding: 8px;
+}
+}
+@media screen and (max-width:495px) {
+    .songInfo{
+        left: 3vw;
+        top: 2vw;
+        font-size: 14px;
+    }
+    #myProgressBar{
+        height: 3px;
+    }
+    .songItemContainer{
+        width: 70vw;
+        }
+    .songItem{
+        padding: 6px;
+    }
+    .songItemPlay{
+        display: flex;
+        flex-direction: row;
+    }
+}
